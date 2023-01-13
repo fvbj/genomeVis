@@ -1,11 +1,14 @@
 # genomeVis project
 # Application GC2C - Genome code 3D visualization
 
-The GC2C application is implemented in the Java programming language and the OpenGL graphics library (lwjgl). The GC2C visualizes individual species rendered as a small sphere and placed in 3D space. The position of the 3D sphere is based on a vector composed of DNA, cDNA and, cds values. These values are normalized and converted to the interval from 0 to 1 in a unit cube with red-green-blue axes.
+The GC2C application visualizes individual species rendered as a small spheres and placed in 3D space. 
+The position of the 3D sphere is based on a vector composed of DNA, cDNA and, cds values. 
+These values are normalized and converted to the interval from 0 to 1 in a unit cube with red-green-blue color axes.
 
 ## Dependencies
-* JDK/JRE 1.7
-* lwjgl3
+The GC2C application is implemented in the Java programming language and the OpenGL graphics library (lwjgl). 
+* JDK/JRE version 15
+* lwjgl 3.3 (https://www.lwjgl.org/guide)
 
 ## UX
 Interaction in 3D space
@@ -37,10 +40,22 @@ Data analyze mode - making eser defined groups, groups colored and connected by 
   * PageDown/Up - set the distance or level
 * Insert/Delete - change color of the selected groups
 
+## Download bin 
+Precompiled version for win64 Java 15
+**[https://lide.uhk.cz/fim/ucitel/jezekbr1/genome/genomeVis_jar.zip](https://lide.uhk.cz/fim/ucitel/jezekbr1/genome/genomeVis_jar.zip)**.
+
+unzip
+
+run <code>java -jar genomeVis.jar</code>
+
 ## Samples
 3D visualization of all species
 ![3D visualization of all species](/doc/img/Clipboard6.jpg)
+
+
 Visualisation of selected species
 ![3D visualisation of selected species](/doc/img/Clipboard8.jpg)
-Detail of 3D vizualization of fish
+
+Detail view with information of selected fish
 ![Detail of 3D vizualization of fish](/doc/img/Clipboard7.jpg)
+

@@ -14,10 +14,9 @@ import transforms.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.DoubleBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -328,13 +327,20 @@ public class Renderer extends AbstractRenderer {
 
 	private static String readIntoString(String filename) {
 		StringBuilder buff = new StringBuilder();
-		BufferedReader in;
+		InputStream is = ShaderUtils.class.getResourceAsStream(filename);
+		if (is == null) {
+			System.out.println("File not found ");
+			return null;
+		}
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+
+		String line;
 		try {
-			in = new BufferedReader(new FileReader(filename));
-			String line;
 			while ((line = in.readLine()) != null) buff.append(line);
 			in.close();
 		} catch (IOException e) {
+			System.err.println("Read error in ");
 			e.printStackTrace();
 		}
 		return buff.toString();
@@ -421,9 +427,9 @@ public class Renderer extends AbstractRenderer {
 		OGLUtils.printJAVAparameters();
 
 
-		dataRecords = readCSV("data/species.csv");
+		dataRecords = readCSV("/data/species.csv");
 
-		speciesTree  = readIntoString("data/speciesTree.txt");
+		speciesTree  = readIntoString("/data/speciesTree.txt");
 
 		initData(categories);
 		tree = 0;

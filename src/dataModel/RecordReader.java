@@ -1,19 +1,25 @@
 package dataModel;
 
+import lwjglutils.ShaderUtils;
 import transforms.Point3D;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecordReader {
     public static List<Record> readCSV(String fileName){
         List<Record> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            int index = 0;
+        InputStream is = ShaderUtils.class.getResourceAsStream(fileName);
+        if (is == null) {
+            System.out.println("File not found ");
+            return null;
+        }
+        BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+        String line;
+        int index = 0;
+        try {
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(";");
                 //records.add(Arrays.asList(values));
@@ -37,6 +43,7 @@ public class RecordReader {
                 index++;
             }
         } catch (IOException e) {
+            System.err.println("Read error in ");
             e.printStackTrace();
         }
         return records;
