@@ -39,8 +39,8 @@ Data analyze mode - making eser defined groups, groups colored and connected by 
 
 ## Samples
 3D visualization of all species
-![3D visualization of all species](/doc/img/Clipboard 6.jpg)
+![3D visualization of all species](/doc/img/Clipboard6.jpg)
 Visualisation of selected species
-![3D visualisation of selected species](/doc/img/Clipboard 8.jpg)
+![3D visualisation of selected species](/doc/img/Clipboard8.jpg)
 Detail of 3D vizualization of fish
-![Detail of 3D vizualization of fish](/doc/img/Clipboard 7.jpg)
+![Detail of 3D vizualization of fish](/doc/img/Clipboard7.jpg)
