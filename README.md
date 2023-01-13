@@ -38,6 +38,9 @@ Data analyze mode - making eser defined groups, groups colored and connected by 
 * Insert/Delete - change color of the selected groups
 
 ## Samples
-![](doc/img/Clipboard 8.jpg)
-![](doc/img/Clipboard 6.jpg)
-![](doc/img/Clipboard 7.jpg)
+3D visualization of all species
+![3D visualization of all species](/doc/img/Clipboard 6.jpg)
+Visualisation of selected species
+![3D visualisation of selected species](/doc/img/Clipboard 8.jpg)
+Detail of 3D vizualization of fish
+![Detail of 3D vizualization of fish](/doc/img/Clipboard 7.jpg)
